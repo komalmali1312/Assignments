@@ -1,5 +1,7 @@
 package assignments;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Assignment5_Collection {
@@ -20,7 +22,7 @@ public static void main(String[] args) {
 	JohnDoeDetails.put("Address","123 Elm St");
 	JohnDoeDetails.put("name","John Doe");
 	studentDetails.put("John Doe",JohnDoeDetails);
-	System.out.println(studentDetails.get("John Doe").get("PAN Number"));
+	//System.out.println(studentDetails.get("John Doe").get("PAN Number"));
 //JaneSmithDetails	
 	Map<String,String>JaneSmithDetails=new HashMap<>();
 	JaneSmithDetails.put("Age","Twenty One");
@@ -34,7 +36,7 @@ public static void main(String[] args) {
 	JaneSmithDetails.put("Address","456 Oak St");
 	JaneSmithDetails.put("name","Jane Smith");
 	studentDetails.put("Jane Smith",JaneSmithDetails);
-	System.out.println(studentDetails.get("Jane Smith").get("Roll Number"));
+	//System.out.println(studentDetails.get("Jane Smith").get("Roll Number"));
 //MikeBrownDetails	
 	Map<String,String>MikeBrownDetails=new HashMap<>();
 	MikeBrownDetails.put("Age","Twenty Two");
@@ -48,7 +50,7 @@ public static void main(String[] args) {
 	MikeBrownDetails.put("Address","789 Pine St");
 	MikeBrownDetails.put("name","Mike Brown");
 	studentDetails.put("Mike Brown",MikeBrownDetails);
-	System.out.println(studentDetails.get("Mike Brown").get("GPA"));
+	//System.out.println(studentDetails.get("Mike Brown").get("GPA"));
 	
 //EmployeeDetails
 			Map<String, Map<String, String>> EmployeeDetails = new HashMap<>();
@@ -64,7 +66,7 @@ public static void main(String[] args) {
 			AliceGreenDetails.put("PAN Number","SDF6543210");
 			AliceGreenDetails.put("Employee ID","E001");
 			EmployeeDetails.put("E001",AliceGreenDetails);
-			System.out.println(EmployeeDetails.get("E001").get("PAN Number"));
+			//System.out.println(EmployeeDetails.get("E001").get("PAN Number"));
 	//BobJohnsonDetails	
 			Map<String,String>BobJohnsonDetails=new HashMap<>();
 			BobJohnsonDetails.put("name","Bob Johnson");
@@ -77,7 +79,7 @@ public static void main(String[] args) {
 			BobJohnsonDetails.put("PAN Number","REW6543211");
 			BobJohnsonDetails.put("Employee ID","E001");
 			EmployeeDetails.put("E002",BobJohnsonDetails);
-			System.out.println(EmployeeDetails.get("E002").get("Email"));
+			//System.out.println(EmployeeDetails.get("E002").get("Email"));
 	//CarolWhiteDetails	
 			Map<String,String>CarolWhiteDetails=new HashMap<>();
 			CarolWhiteDetails.put("name","Carol White");
@@ -90,7 +92,7 @@ public static void main(String[] args) {
 			CarolWhiteDetails.put("PAN Number","TYR6543212");
 			CarolWhiteDetails.put("Employee ID","E003");
 			EmployeeDetails.put("E003",CarolWhiteDetails);
-			System.out.println(EmployeeDetails.get("E003").get("Department"));
+			//System.out.println(EmployeeDetails.get("E003").get("Department"));
 			
 //ProductDetails
 			Map<String, Map<String, String>> ProductDetails = new HashMap<>();
@@ -107,7 +109,7 @@ public static void main(String[] args) {
 			LaptopDetails.put("Expiry Date","Aug 2028");
 			LaptopDetails.put("Product ID","P001");
 			ProductDetails.put("P001",LaptopDetails);
-			System.out.println(ProductDetails.get("P001").get("Rating"));
+			//System.out.println(ProductDetails.get("P001").get("Rating"));
 	//DeskChairDetails	
 			Map<String,String>DeskChairDetails=new HashMap<>();
 			DeskChairDetails.put("name","Desk Chair");
@@ -121,7 +123,7 @@ public static void main(String[] args) {
 			DeskChairDetails.put("Expiry Date","N/A");
 			DeskChairDetails.put("Product ID","P002");
 			ProductDetails.put("P002",DeskChairDetails);
-			System.out.println(ProductDetails.get("P002").get("Supplier"));
+			//System.out.println(ProductDetails.get("P002").get("Supplier"));
 	//CoffeeMakerDetails	
 			Map<String,String>CoffeeMakerDetails=new HashMap<>();
 			CoffeeMakerDetails.put("name","Coffee Maker");
@@ -135,7 +137,22 @@ public static void main(String[] args) {
 			CoffeeMakerDetails.put("Expiry Date","Jan 2027");
 			CoffeeMakerDetails.put("Product ID","P003");
 			ProductDetails.put("P003",CoffeeMakerDetails);
-			System.out.println(ProductDetails.get("P003").get("Expiry Date"));			
+			//System.out.println(ProductDetails.get("P003").get("Expiry Date"));	
+			
+			List<Map<String,String>> finaldata=new ArrayList();
+			finaldata.add(CoffeeMakerDetails);
+			finaldata.add(DeskChairDetails);
+			finaldata.add(LaptopDetails);
+			
+			finaldata.add(JaneSmithDetails);
+			finaldata.add(JohnDoeDetails);
+			finaldata.add(MikeBrownDetails);
+			
+			finaldata.add(AliceGreenDetails);
+			finaldata.add(BobJohnsonDetails);
+			finaldata.add(CarolWhiteDetails);
+			
+			System.out.println(finaldata.get(1).get("Supplier"));
 }
 
 }
