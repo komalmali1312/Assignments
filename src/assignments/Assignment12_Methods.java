@@ -1,9 +1,9 @@
 package assignments;
 
 public class Assignment12_Methods {
-	// int profitvalue=0;
+	
 	public static void main(String[] args) {
-		int[] prices = { 7, 1, 5, 3, 6, 4 };
+		int[] prices = {7,6,4,3,1};
 		Assignment12_Methods obj = new Assignment12_Methods();
 		System.out.println(obj.profitcal(prices));
 
